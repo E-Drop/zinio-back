@@ -1,0 +1,43 @@
+{
+  "name": "zinio-back",
+  "version": "1.0.0",
+  "description": "Back end for the assessment of Zinio Fullstack Position",
+  "scripts": {
+    "dev": "nodemon --exec npx babel-node src/app.js",
+    "test": "jest __test__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E-Drop/zinio-back.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "E-Drop",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/E-Drop/zinio-back/issues"
+  },
+  "homepage": "https://github.com/E-Drop/zinio-back#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
+    "jest": "26.6.3",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/runtime": "^7.14.0",
+    "config": "^3.3.6",
+    "express": "^4.17.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
