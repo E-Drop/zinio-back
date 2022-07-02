@@ -11,6 +11,10 @@ export const constants = {
       CODE: 404,
       MESSAGE: `Not found. The resource you're trying to reach has not been found.`
     },
+    FORBIDDEN: {
+      CODE: 403,
+      MESSAGE: `Permission denied. could not perform this operation`
+    },
     SERVER_ERROR: {
       CODE: 500,
       MESSAGE: 'Server error. Something went wrong try it again later.'
