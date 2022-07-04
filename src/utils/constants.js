@@ -2,6 +2,7 @@ export const constants = {
   SPECIFIC_URIS: {
     ISSUES: `/issues`,
   },
+  REQUESTER_VALID_IP: '::1',
   RESPONSES: {
     BAD_REQUEST: {
       CODE: 400,

@@ -6,22 +6,21 @@ import { issues } from "../data/issues.js";
 
 export const getIssues = (req, res) => {
   const { q: keywords } = req.query;
-
   if (keywords) {
     const filteredIssues = filterByNameAndDescription(issues, keywords);
     if (filteredIssues) {
-      const issuesToReturn = filteredIssues.map((issue) => getIssueDTO(issue));
-      return res.send(issuesToReturn);
+      const mappedIssues = filteredIssues.map((issue) => getIssueDTO(issue));
+      return res.send(mappedIssues);
     }
-    return res.send(filteredIssues);
+    return res.send([]);
   }
 
   if (issues.length) {
-    const issuesToReturn = issues.map((issue) => getIssueDTO(issue));
-    return res.send(issuesToReturn);
+    const mappedIssues = issues.map((issue) => getIssueDTO(issue));
+    return res.send(mappedIssues);
   }
 
-  return errorsDispatcher(res, "NOT_FOUND");
+  return errorsDispatcher(res, "BAD_REQUEST");
 };
 
 export const getIssueById = (req, res) => {

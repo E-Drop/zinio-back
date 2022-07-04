@@ -1,5 +1,6 @@
 import express from 'express';
 import config from 'config';
+import cors from 'cors';
 
 import issuesRouter from './routes/issuesRouter.js';
 
@@ -13,6 +14,10 @@ const app = express();
 const port = config.get('PORT');
 
 const {ISSUES} = constants.SPECIFIC_URIS;
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 
 app.use(ISSUES, requesterCheckMiddleware, issuesRouter());
 
